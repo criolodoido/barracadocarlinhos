@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+{% load cloudinary %}
+{% load staticfiles %}
+{% block content %}
+	<b>{% now "jS F Y H:i" %}</b>
+	{% for objeto in objetos %}
+            <div class='cupom'>
+                <center><p>{{ objeto.published_date }}</p></center>
+                <center><h1>{{ objeto.titulo }}</h1></center>
+                <center><img>{% cloudinary objeto.imagem %}</center>
+                <center><p>{{ objeto.apresentacao }}</p></center>
+                <center><p>Somente com a apresentação deste cupom por: <b>R${{ objeto.preco }}</b></p></center>
+                <center><p>Valido até:<b>{{ objeto.validade }}</b></p></center>
+            </div>
+        {% endfor %}
+{% endblock %}

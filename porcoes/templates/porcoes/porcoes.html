@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+{% load cloudinary %}
+{% load staticfiles %}
+{% block content %}
+	{% for objeto in objetos %}
+		<div>
+			<p>{{ objeto.published_date }}</p>
+			<h1>{{ objeto.titulo }}</h1>
+			<center><img>{% cloudinary objeto.imagem %}</center>
+			<p>{{ objeto.apresentacao }}</p>
+		</div>
+	{% endfor %}
+{% endblock %}

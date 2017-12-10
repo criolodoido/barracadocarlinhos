@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="pt">
+	<head>
+		<meta charset="utf-8">
+		<title>Barraca do Carlinhos</title>
+		<link rel="stylesheet" href="/static/css/visual.css">
+		<div class="logo">
+			<img src="{% static 'image/logo3.png' %}" alt="logo"/>
+		</div>
+	</head>
+<body>
+<div class='btns'>
+	<table>
+			<tr>
+				<td><a href="{% url 'porcoes:porcao' %}"><button class="btn1"><h2>Porções</h2></button></a></td>
+				<td><a href="{% url 'bebidas:bebidas' %}"><button class="btn2"><h2>Bebidas</h2></button></a></td>
+				<td><a href="{% url 'pastel:pastel' %}"><button class="btn3"><h2>Pasteis<br />Hot-Dog</button></h2></td>
+				<td><a href="{% url 'coqueteis:coqueteis' %}"><button class="btn4"><h2>Coqueteis</h2></button></a></td>
+				<td><a href="{% url 'cupom:cupom' %}"><button class="btn5"><h2>Cupons!</h2></button></a></td>
+			</tr>
+	</table>
+</div>
+<div class='itens'>
+
+</div>
+</body>
+</html>
+{% block content %}
+{% endblock %}
