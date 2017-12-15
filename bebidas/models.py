@@ -1,3 +1,4 @@
+# -*- coding: utf 8 -*-
 from django.db import models
 from django.utils import timezone
 from cloudinary.models import CloudinaryField
@@ -16,4 +17,7 @@ class Bebidas(models.Model):
 
 	def __str__(self):
 		return self.titulo
-# Create your models here.
+
+	def get_absolute_url(self):
+		#return reverse("detalhe", kwargs={"pk": self.pk})
+		return "bebidas/%s" %(self.pk)

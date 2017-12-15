@@ -5,7 +5,7 @@
 	{% for objeto in objetos %}
 		<div class='bebidas'>
 			<center><p>{{ objeto.published_date }}</p></center>
-			<center><h1>{{ objeto.titulo }}</h1></center>
+			<center><h1><a href="{{ objeto.get_absolute_url }}">{{ objeto.titulo }}</a></h1></center>
 			<center><img>{% cloudinary objeto.imagem %}</center>
 			<center><p>{{ objeto.apresentacao }}</p></center>
 			<center><p>R${{ objeto.preco }}</p></center>

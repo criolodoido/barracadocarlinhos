@@ -16,3 +16,8 @@ class Porcao(models.Model):
 
 	def __str__(self):
 		return self.titulo
+
+
+	def get_absolute_url(self):
+		#return reverse("detalhe", kwargs={"pk": self.pk})
+		return "porcoes/%s" %(self.pk)
