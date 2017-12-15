@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+{% load cloudinary %}
+{% block content %}
+<div class="fb-share-button" data-href="{{ request.build_absolute_uri }}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Compartilhar</a></div>
+    <div class="post">
+        {% if objeto.published_date %}
+            <div class="date">
+                {{ objeto.published_date }}{{ objeto.timestamp }}
+            </div>
+        {% endif %}
+        <center><p><h1>{{ objeto.nome }}</h1></p></center>
+        <center><img>{% cloudinary objeto.imagem %}</img></center>
+        <center><p><h2>{{ objeto.apresentacao|linebreaksbr }}</h2></p></center>
+        <center><p><h2>R${{ objeto.preco }}</h2></p></center>
+    </div>
+
+<footer>
+<div class="fb-comments" data-href="{{ request.build_absolute_uri }}" data-numposts="2"></div>
+</footer>
+{% endblock %}
+<!-- Pensar numa maneira de deixar a caixa de comentários do face na parte de paixo da página -->

@@ -5,6 +5,7 @@ from cloudinary.models import CloudinaryField
 class Post(models.Model):
 	titulo = models.CharField(max_length=200)
 	apresentacao = models.TextField()
+	preco = models.FloatField(blank=False, null=False, default=0)
 	imagem =  CloudinaryField('imagem', null=False, blank=False)
 	created_date = models.DateTimeField(default=timezone.now)
 	published_date = models.DateTimeField(null=False, blank=False)
@@ -15,3 +16,7 @@ class Post(models.Model):
 
 	def __str__(self):
 		return self.titulo
+
+	def get_absolute_url(self):
+		#return reverse("detalhe", kwargs={"pk": self.pk})
+		return "/post/%s" %(self.pk)

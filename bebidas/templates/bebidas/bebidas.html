@@ -3,11 +3,12 @@
 {% load staticfiles %}
 {% block content %}
 	{% for objeto in objetos %}
-		<div>
-			<p>{{ objeto.published_date }}</p>
-			<h1>{{ objeto.titulo }}</h1>
+		<div class='bebidas'>
+			<center><p>{{ objeto.published_date }}</p></center>
+			<center><h1>{{ objeto.titulo }}</h1></center>
 			<center><img>{% cloudinary objeto.imagem %}</center>
-			<p>{{ objeto.apresentacao }}</p>
+			<center><p>{{ objeto.apresentacao }}</p></center>
+			<center><p>R${{ objeto.preco }}</p></center>
 		</div>
 	{% endfor %}
 {% endblock %}
