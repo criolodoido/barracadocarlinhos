@@ -4,7 +4,7 @@
 {% block content %}
 	{% for objeto in objetos %}
             <div class='ini'>
-                <center><p>{{ objeto.published_date }}</p></center>
+                <center><h2><p>Publicado em:{{ objeto.published_date }}</p></h2><center>
                 <center><h1><a href="{{ objeto.get_absolute_url }}">{{ objeto.titulo }}</a></h1></center>
                 <center><img>{% cloudinary objeto.imagem %}</center>
                 <center><p><h2>{{ objeto.apresentacao }}</h2></p></center>
