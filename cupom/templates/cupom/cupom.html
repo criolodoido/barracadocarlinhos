@@ -8,9 +8,9 @@
                 <center><p>{{ objeto.published_date }}</p></center>
                 <center><h1><a href="{{ objeto.get_absolute_url }}">{{ objeto.titulo }}</a></h1></center>
                 <center><img>{% cloudinary objeto.imagem %}</center>
-                <center><p>{{ objeto.apresentacao }}</p></center>
-                <center><p>Somente com a apresentação deste cupom por: <b>R${{ objeto.preco }}</b></p></center>
-                <center><p>Valido até:<b>{{ objeto.validade }}</b></p></center>
+                <center><p><h2>{{ objeto.apresentacao }}</h2></p></center>
+                <center><p><h2>Somente com a apresentação deste cupom por: <b>R${{ objeto.preco }}</b></h2></p></center>
+                <center><p><h2>Valido até:<b>{{ objeto.validade }}</b></h2></p></center>
             </div>
         {% endfor %}
 {% endblock %}

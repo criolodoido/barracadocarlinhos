@@ -3,11 +3,12 @@
 {% load staticfiles %}
 {% block content %}
 	{% for objeto in objetos %}
-            <div>
+            <div class='ini'>
                 <center><p>{{ objeto.published_date }}</p></center>
                 <center><h1><a href="{{ objeto.get_absolute_url }}">{{ objeto.titulo }}</a></h1></center>
                 <center><img>{% cloudinary objeto.imagem %}</center>
-                <center><p>{{ objeto.apresentacao }}</p></center>
+                <center><p><h2>{{ objeto.apresentacao }}</h2></p></center>
+                <center><p><h2>R${{ objeto.preco }}</h2></p></center>
             </div>
         {% endfor %}
 {% endblock %}
