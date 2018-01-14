@@ -4,7 +4,7 @@ from django.utils import timezone
 from .models import Post
 
 def index(request):
-	objetos = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+	objetos = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
 	return render(request, 'core/index.html', {'objetos': objetos})	
 
 def post_detail(request, pk):
