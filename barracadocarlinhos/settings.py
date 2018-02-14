@@ -72,9 +72,9 @@ WSGI_APPLICATION = 'barracadocarlinhos.wsgi.application'
 DATABASES = {'default': dj_database_url.config(default='postgres://visus:sentinela@localhost/banco2')}
 
 CLOUDINARY = {
-    'cloud_name' : 'carlinhos',
-    'api_key' : '795362628178723',
-    'api_secret': 'IiPbtIjIXcM43-fxvJcnipXHgKQ'
+    'cloud_name' : 'www-barracadocarlinhos-com-br',
+    'api_key' : '836667361487549',
+    'api_secret': 'UdhCNdsGzNmH_LKML22JsDQAdxc'
 }
 
 # Password validation

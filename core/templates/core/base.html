@@ -2,29 +2,29 @@
 {% load staticfiles %}
 {% load cloudinary %}
 <html lang="pt">
-	<head>
-		<title>Barraca do Carlinhos</title>
-		<meta charset="utf-8">
-		<meta property="fb:app_id" content="554611871543141">
-		<meta property="fb:admins" content="100002421374214">
-		<meta property="fb:admins" content="100008664494642">
-		<meta property="og:type" content="website">
-		<meta property="og:title" content="{{ objeto.titulo }}">
-		<meta property="og:description" content="{{ objeto.apresentacao }}" >
-		<meta property="og:image" content="{% cloudinary_url objeto.imagem %}" > 
-		<meta property="og:url" content="{{ request.build_absolute_uri }}">
-		<meta name="author" content="Visus">
-		<meta name="description" content="Barraca do Carlinhos - A melhor qualidade do litoral">
-		<meta name="keywords" content="barraca do carlinhos, praia, praia da enseada, bertioga, porção, maitinga, litoral norte">
-		<meta name="robots" content="index,follow">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Indie+Flower" rel="stylesheet">
-		<link rel="stylesheet" href="/static/css/visual.css">
-		<div class="logo">
-			<img src="{% static 'image/essa.png' %}" alt="logo"/>
-		</div>
+<head>
+<title>Barraca do Carlinhos</title>
+<meta charset="utf-8">
+<meta property="fb:app_id" content="554611871543141">
+<meta property="fb:admins" content="100002421374214">
+<meta property="fb:admins" content="100008664494642">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ objeto.titulo }}">
+<meta property="og:description" content="{{ objeto.apresentacao }}" >
+<meta property="og:image" content="{% cloudinary_url objeto.imagem %}" > 
+<meta property="og:url" content="{{ request.build_absolute_uri }}">
+<meta name="author" content="Visus">
+<meta name="description" content="Barraca do Carlinhos - A melhor qualidade do litoral">
+<meta name="keywords" content="barraca do carlinhos, praia, praia da enseada, bertioga, porção, maitinga, litoral norte">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Indie+Flower" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/visual.css">
+<div class="logo">
+<img src="{% static 'image/essa.png' %}" alt="logo"/>
+</div>
 <!-- Google Analytics -->
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
